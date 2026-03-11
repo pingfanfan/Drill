@@ -4,11 +4,45 @@
 
 The cognitive adversary framework **prefers** automated collection but **adapts** when tools fail. This guide covers both approaches.
 
+**Drill v1.1+ Integrated Search Stack:**
+```
+Google AI Mode (Primary) → Brave MCP (Secondary) → User-assisted (Fallback)
+```
+
 **Priority order:**
-1. Automated collection (fastest, most comprehensive)
-2. User-assisted collection (reliable, quality-controlled)
-3. Hybrid approach (flexible, practical)
-4. Knowledge-based analysis (last resort, still valuable)
+1. **Google AI Mode** - Comprehensive AI search with 100+ sources
+2. **Brave MCP Search** - Real-time web results
+3. **User-assisted collection** - Manual curation
+4. **Knowledge-based analysis** - Last resort
+
+---
+
+## Integrated Auto-Search (Drill v1.1+)
+
+### Automatic Execution
+
+When user triggers Drill, the skill automatically:
+
+1. **Optimizes query** for comprehensive search
+2. **Runs Google AI Mode** → Gets AI-generated overview with citations
+3. **Runs Brave Search** → Gets real-time news and data
+4. **Fetches top sources** → Extracts detailed content
+5. **Compiles materials** → Ready for 5-layer analysis
+
+### Search Query Optimization
+
+**Template for Google AI Mode:**
+```
+[Topic] 2026 (aspect1, aspect2, aspect3). Include financial data and recent developments.
+```
+
+**Examples:**
+
+| User Request | Optimized Query |
+|-------------|-----------------|
+| "MiniMax" | "MiniMax 2026 valuation IPO market cap funding financial performance" |
+| "AI market" | "AI industry 2026 trends funding investment market size" |
+| "Competitor analysis" | "[Company] 2026 competitors market share pricing strategy" |
 
 ---
 

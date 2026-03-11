@@ -1,7 +1,7 @@
 ---
 name: drill
-description: This skill should be used when the user says "drill", "drill into", "drill down", "drill this", "drill my", "let's drill", or asks to deeply analyze, stress test, or tear apart their ideas, strategy, market, or business model.
-version: 1.0.0
+description: This skill should be used when the user says "drill", "drill into", "drill down", "drill this", "drill my", "let's drill", "深挖", "盘一下", "盘盘", "深度分析", "深挖一下", "拆解", "剖析", or asks to deeply analyze, stress test, or tear apart their ideas, strategy, market, or business model.
+version: 1.1.0
 ---
 
 # Drill 🔥
@@ -13,10 +13,12 @@ Drill transforms AI from an information organizer into a **cognitive adversary**
 ## How It Works
 
 ```
-User asks → AI collects materials → Applies 5-layer framework → Delivers structured insights
+User asks → AI auto-searches (Google AI Mode + Brave) → Collects materials → Applies 5-layer framework → Delivers structured insights
 ```
 
-**Trigger phrases**: "drill", "drill into", "drill down", "drill this", "let's drill"
+**Trigger phrases (English)**: "drill", "drill into", "drill down", "drill this", "let's drill"
+
+**Trigger phrases (中文)**: "深挖", "盘一下", "盘盘", "深度分析", "深挖一下", "拆解", "剖析"
 
 ## The 5-Layer Framework
 
@@ -81,37 +83,78 @@ The scarce resource is not data—it's the questions that reveal structure.
 
 When user triggers Drill ("drill into [topic]"):
 
-### Step 1: Material Collection
+### Step 1: Material Collection (Auto-Search Enabled)
 
 **CRITICAL: Prioritize fresh information based on current date (2026).** Analysis value depends on data recency.
 
-**Attempt automated collection first:**
+**Drill now automatically uses Google AI Mode + Brave Search for comprehensive research.**
 
+#### Auto-Search Strategy
+
+When user triggers Drill, automatically execute:
+
+```bash
+# Primary: Google AI Mode Search (comprehensive AI-generated overview)
+cd /Users/pingfan/Library/Mobile\ Documents/com~apple~CloudDocs/claude-code/google-ai-mode-skill
+source .venv/bin/activate
+python scripts/run.py search.py --query "[optimized query] 2026" --save
+
+# Secondary: Brave MCP Search (real-time results)
+brave_web_search --query "[topic] 2026" --count 10
 ```
-1. Search for top 3-5 competitors (prioritize 2026 sources, then 2025)
-2. Fetch competitor websites for positioning, pricing, messaging
-3. Search for user reviews on [product] + "G2" or "Reddit" (sort by recent)
-4. Fetch relevant Reddit threads and forum discussions (last 3-6 months)
-5. Search for recent Hacker News discussions (2025-2026)
-6. Look for earnings calls or investor materials (latest quarter)
+
+**Search execution flow:**
+```
+1. Optimize user query for Google AI Mode
+2. Run Google AI Mode search → Save comprehensive report
+3. Run Brave Search → Get real-time links
+4. Fetch top 3-5 webpages from search results
+5. Compile all materials for analysis
 ```
 
-**Time-filtered search queries (use these patterns):**
-- "[topic] 2026" (current year - HIGHEST PRIORITY)
-- "[topic] 2025" (recent year)
-- "[topic] latest news"
-- "[topic] recent developments"
-- "[company] funding 2025 2026"
-- "[market] trends 2026"
-- site:reddit.com/r/[subreddit] "[topic]" (sort by new)
+#### Search Query Optimization
 
-**Target**: 5-10 primary sources, majority from last 6 months, before analysis begins.
+**Before searching, optimize the query:**
 
-**Data freshness verification:**
-- [ ] Check publication dates on all sources
-- [ ] Prioritize sources from 2024-2025
-- [ ] Flag any source older than 12 months
-- [ ] Note real-time data limitations in output
+| User Input | Optimized Query for Google AI Mode |
+|------------|-----------------------------------|
+| "MiniMax" | "MiniMax 2026 valuation IPO market cap funding financials" |
+| "AI market" | "AI industry 2026 trends funding investment valuation" |
+| "Baidu" | "Baidu BIDU 2026 market cap stock price financial performance" |
+
+**Pattern**: `[Topic] 2026 (aspect1, aspect2, aspect3). Include financial data.`
+
+#### Multi-Source Collection
+
+**Priority 1: Google AI Mode** (comprehensive overview with citations)
+- AI-generated summary from 100+ sources
+- Inline citations [1][2][3]
+- Saves to `results/YYYY-MM-DD_HH-MM-SS_*.md`
+
+**Priority 2: Brave Search** (real-time web results)
+- Current news and updates
+- Competitor intelligence
+- Market data
+
+**Priority 3: Web Fetch** (detailed content)
+- Fetch top 5 search result pages
+- Extract specific data points
+- Verify claims with primary sources
+
+**Target**: 10-15 sources from combined search results
+
+#### Handling CAPTCHA (Google AI Mode)
+
+If Google AI Mode encounters CAPTCHA:
+1. Inform user: "Google requires CAPTCHA verification for comprehensive search"
+2. Offer: "I can run the search with browser visible for you to complete CAPTCHA"
+3. Fallback: Use Brave Search only + user-provided materials
+
+#### Data Freshness Verification
+- [ ] Check all source publication dates
+- [ ] Prioritize 2026 sources (current year)
+- [ ] Flag sources older than 6 months
+- [ ] Note: "Analysis based on data as of [search date]"
 
 **If automated collection fails:**
 
@@ -335,7 +378,31 @@ Drill treats AI as an **externalized strategic mind**:
 
 ---
 
+## Usage Examples
+
+### English
+```
+"Drill into the AI market"
+"Drill down on MiniMax valuation"
+"Let's drill this business model"
+```
+
+### 中文
+```
+"深挖一下 MiniMax 的估值"
+"盘一下这个市场"
+"深度分析百度"
+"拆解这个商业模式"
+"剖析竞争格局"
+```
+
 **Ready to drill?** Just say:
 ```
 "Drill into [your topic]"
+```
+
+Or in Chinese:
+```
+"深挖 [你的话题]"
+"盘一下 [你的话题]"
 ```
