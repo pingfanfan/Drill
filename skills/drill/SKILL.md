@@ -83,18 +83,34 @@ When user triggers Drill ("drill into [topic]"):
 
 ### Step 1: Material Collection
 
+**CRITICAL: Prioritize fresh information.** Analysis value depends on data recency.
+
 **Attempt automated collection first:**
 
 ```
-1. Search for top 3-5 competitors
+1. Search for top 3-5 competitors (prioritize 2025 sources)
 2. Fetch competitor websites for positioning, pricing, messaging
-3. Search for user reviews on [product] + "G2" or "Reddit"
-4. Fetch relevant Reddit threads and forum discussions
-5. Search for recent Hacker News discussions
-6. Look for earnings calls or investor materials (if applicable)
+3. Search for user reviews on [product] + "G2" or "Reddit" (sort by recent)
+4. Fetch relevant Reddit threads and forum discussions (last 3-6 months)
+5. Search for recent Hacker News discussions (2024-2025)
+6. Look for earnings calls or investor materials (latest quarter)
 ```
 
-**Target**: 5-10 primary sources before analysis begins.
+**Time-filtered search queries (use these patterns):**
+- "[topic] 2025"
+- "[topic] latest news"
+- "[topic] recent developments"
+- "[company] funding 2024 2025"
+- "[market] trends 2025"
+- site:reddit.com/r/[subreddit] "[topic]" (sort by new)
+
+**Target**: 5-10 primary sources, majority from last 6 months, before analysis begins.
+
+**Data freshness verification:**
+- [ ] Check publication dates on all sources
+- [ ] Prioritize sources from 2024-2025
+- [ ] Flag any source older than 12 months
+- [ ] Note real-time data limitations in output
 
 **If automated collection fails:**
 
@@ -127,29 +143,42 @@ Layer 5: Synthesize decision-grade questions
 
 ### Step 3: Structured Output
 
-Deliver insights in this format:
+Deliver insights in this format with **explicit data freshness annotations**:
 
 ```markdown
 ## 🔍 Materials Collected
-[Summary of sources gathered]
+[Summary of sources gathered with dates]
+- Source 1 (Date: 2025-01-15)
+- Source 2 (Date: 2024-12-10)
+- Source 3 (Date: 2024-11-22)
+
+**Data Freshness**: ✅ Majority from last 6 months | ⚠️ Some older sources noted
 
 ## 📋 Raw Observations
-[10-15 specific evidence points]
+[10-15 specific evidence points with source dates]
+- Observation 1 (Source: [Name], Date: 2025-01)
+- Observation 2 (Source: [Name], Date: 2024-12)
 
 ## 🎯 Unspoken Consensus
 [What winners know that outsiders miss]
+*Based on [X sources] from 2024-2025*
 
 ## 🏗️ Structural Assumptions
 [3 foundations + their fragility conditions]
+*Last verified: [Date of most recent source]*
 
 ## ⚔️ Adversarial Challenges
 [5 investor-level destruction questions]
 
 ## 💡 Strategic Implications
 [What survives the assault + recommended actions]
+**⚠️ Time-sensitive note**: This analysis based on data as of [latest source date].
+Market conditions may have changed.
 
 ## ❓ Next Questions
 [Priority questions for further investigation]
+- [ ] Verify with data from last 30 days
+- [ ] Check for updates on [specific topic]
 ```
 
 ## Material Collection Guide
@@ -186,9 +215,9 @@ When automated tools fail, ask user for:
 ### Finding Competitors (Search Queries)
 
 If search tools work:
-- "[market/space] competitors"
-- "best [product category] 2024"
-- "[market leader] alternatives"
+- "[market/space] competitors 2025"
+- "best [product category] 2025"
+- "[market leader] alternatives 2024 2025"
 
 If search fails, ask user:
 - "Who are the top 3-5 players in this space that you're aware of?"

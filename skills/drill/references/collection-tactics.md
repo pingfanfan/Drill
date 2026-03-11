@@ -32,6 +32,62 @@ Test fetch: Fetch a known working URL (e.g., example.com)
 
 When tools are working, use the following tactics to efficiently collect high-quality primary sources.
 
+**⚠️ CRITICAL: Always prioritize recent information.** Stale data leads to wrong conclusions.
+
+### Time-Based Search Priority
+
+| Priority | Time Range | Search Pattern | Usage |
+|----------|-----------|----------------|-------|
+| **P0** | Last 3 months | `"[topic] 2025"`, `"[topic] latest"` | Core analysis |
+| **P1** | Last 6 months | `"[topic] 2024 2025"`, `"recent"` | Supporting evidence |
+| **P2** | Last 12 months | `"[topic] 2024"` | Context only |
+| **Avoid** | >12 months | Old sources | Only for historical trend |
+
+### Search Query Templates with Time Filters
+
+**For latest funding/valuation:**
+```
+"[company] funding 2025"
+"[company] valuation latest"
+"[company] series [A/B/C] 2024 2025"
+"[company] raised recently"
+```
+
+**For market trends:**
+```
+"[market] trends 2025"
+"[market] latest developments"
+"[market] news this month"
+```
+
+**For competitor intelligence:**
+```
+"[competitor] announced 2025"
+"[competitor] product launch 2024"
+"[competitor] earnings Q4 2024"
+```
+
+**For Reddit/communities (recent discussions):**
+```
+"[topic] site:reddit.com" (sort by "new")
+"[topic] 2025 site:news.ycombinator.com"
+```
+
+### Data Freshness Checklist
+
+For each source collected, verify:
+- [ ] **Publication date**: Is it from 2024-2025?
+- [ ] **Data vintage**: Financial data from which quarter/year?
+- [ ] **Update frequency**: Is this a live dashboard or static report?
+- [ ] **Source staleness**: Has the company/source been updated recently?
+
+**Red flags (avoid or flag as outdated):**
+- Valuation data from >6 months ago for early-stage companies
+- Market size estimates from >12 months ago in fast-moving sectors
+- User review sentiment from >6 months ago (rapidly changing products)
+
+---
+
 ## Phase 1: Landscape Mapping (5-10 minutes)
 
 ### Identify Key Players
@@ -43,7 +99,7 @@ When tools are working, use the following tactics to efficiently collect high-qu
    - Goal: Identify the 3-5 main players
 
 2. **Leader identification**
-   - Query: `"best [category]" OR "top [category] 2024"`
+   - Query: `"best [category]" OR "top [category] 2025"`
    - Goal: Confirm market leaders and emerging challengers
 
 3. **Alternative discovery**
@@ -52,9 +108,10 @@ When tools are working, use the following tactics to efficiently collect high-qu
 
 **Example for "AI code review":**
 ```
-Query 1: "AI code review software"
-Query 2: "best AI code review tools 2024"
-Query 3: "CodeRabbit alternatives"
+Query 1: "AI code review software 2025"
+Query 2: "best AI code review tools 2025"
+Query 3: "CodeRabbit alternatives 2024 2025"
+Query 4: "AI code review latest news"
 ```
 
 ### Build Target List
