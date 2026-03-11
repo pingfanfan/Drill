@@ -83,25 +83,26 @@ When user triggers Drill ("drill into [topic]"):
 
 ### Step 1: Material Collection
 
-**CRITICAL: Prioritize fresh information.** Analysis value depends on data recency.
+**CRITICAL: Prioritize fresh information based on current date (2026).** Analysis value depends on data recency.
 
 **Attempt automated collection first:**
 
 ```
-1. Search for top 3-5 competitors (prioritize 2025 sources)
+1. Search for top 3-5 competitors (prioritize 2026 sources, then 2025)
 2. Fetch competitor websites for positioning, pricing, messaging
 3. Search for user reviews on [product] + "G2" or "Reddit" (sort by recent)
 4. Fetch relevant Reddit threads and forum discussions (last 3-6 months)
-5. Search for recent Hacker News discussions (2024-2025)
+5. Search for recent Hacker News discussions (2025-2026)
 6. Look for earnings calls or investor materials (latest quarter)
 ```
 
 **Time-filtered search queries (use these patterns):**
-- "[topic] 2025"
+- "[topic] 2026" (current year - HIGHEST PRIORITY)
+- "[topic] 2025" (recent year)
 - "[topic] latest news"
 - "[topic] recent developments"
-- "[company] funding 2024 2025"
-- "[market] trends 2025"
+- "[company] funding 2025 2026"
+- "[market] trends 2026"
 - site:reddit.com/r/[subreddit] "[topic]" (sort by new)
 
 **Target**: 5-10 primary sources, majority from last 6 months, before analysis begins.
@@ -215,9 +216,9 @@ When automated tools fail, ask user for:
 ### Finding Competitors (Search Queries)
 
 If search tools work:
-- "[market/space] competitors 2025"
-- "best [product category] 2025"
-- "[market leader] alternatives 2024 2025"
+- "[market/space] competitors 2026"
+- "best [product category] 2026"
+- "[market leader] alternatives 2025 2026"
 
 If search fails, ask user:
 - "Who are the top 3-5 players in this space that you're aware of?"

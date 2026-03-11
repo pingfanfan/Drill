@@ -34,28 +34,30 @@ When tools are working, use the following tactics to efficiently collect high-qu
 
 **⚠️ CRITICAL: Always prioritize recent information.** Stale data leads to wrong conclusions.
 
-### Time-Based Search Priority
+### Time-Based Search Priority (Current Date: 2026-03-11)
 
 | Priority | Time Range | Search Pattern | Usage |
 |----------|-----------|----------------|-------|
-| **P0** | Last 3 months | `"[topic] 2025"`, `"[topic] latest"` | Core analysis |
-| **P1** | Last 6 months | `"[topic] 2024 2025"`, `"recent"` | Supporting evidence |
-| **P2** | Last 12 months | `"[topic] 2024"` | Context only |
-| **Avoid** | >12 months | Old sources | Only for historical trend |
+| **P0** | Last 3 months (2025-12 to 2026-03) | `"[topic] 2026"`, `"[topic] latest"` | Core analysis - HIGHEST PRIORITY |
+| **P1** | Last 6 months (2025-09 to 2026-03) | `"[topic] 2025 2026"`, `"recent"` | Supporting evidence |
+| **P2** | Last 12 months (2025-03 to 2026-03) | `"[topic] 2025"` | Context only |
+| **Avoid** | >12 months (Before 2025-03) | Old sources | Only for historical trend |
 
 ### Search Query Templates with Time Filters
 
-**For latest funding/valuation:**
+**For latest funding/valuation (2026 priority):**
 ```
-"[company] funding 2025"
-"[company] valuation latest"
-"[company] series [A/B/C] 2024 2025"
-"[company] raised recently"
+"[company] funding 2026"
+"[company] valuation 2026"
+"[company] series [A/B/C] 2025 2026"
+"[company] raised 2026"
+"[company] latest funding"
 ```
 
 **For market trends:**
 ```
-"[market] trends 2025"
+"[market] trends 2026"
+"[market] 2026 outlook"
 "[market] latest developments"
 "[market] news this month"
 ```
@@ -99,7 +101,7 @@ For each source collected, verify:
    - Goal: Identify the 3-5 main players
 
 2. **Leader identification**
-   - Query: `"best [category]" OR "top [category] 2025"`
+   - Query: `"best [category]" OR "top [category] 2026"`
    - Goal: Confirm market leaders and emerging challengers
 
 3. **Alternative discovery**
@@ -108,10 +110,11 @@ For each source collected, verify:
 
 **Example for "AI code review":**
 ```
-Query 1: "AI code review software 2025"
-Query 2: "best AI code review tools 2025"
-Query 3: "CodeRabbit alternatives 2024 2025"
-Query 4: "AI code review latest news"
+Query 1: "AI code review software 2026"  ← PRIORITY
+Query 2: "best AI code review tools 2026"
+Query 3: "CodeRabbit alternatives 2025 2026"
+Query 4: "AI code review latest news 2026"
+Query 5: "AI code review recent developments"
 ```
 
 ### Build Target List
