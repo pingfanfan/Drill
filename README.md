@@ -3,17 +3,21 @@
 > **Drill into your ideas. Surface what hides beneath.**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blue)](https://claude.ai/code)
+[![Version](https://img.shields.io/badge/version-1.1.0-orange.svg)](https://github.com/pingfanfan/Drill/releases)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 Drill is a [Claude Code](https://claude.ai/code) skill that transforms AI from an information organizer into a **cognitive adversary**. Stop getting surface-level summaries. Start getting decision-grade insights.
 
+**🆕 v1.1.0**: Auto-search with Google AI Mode + Chinese language support (深挖/盘一下)
+
 ```
 You: "Drill into the AI code review market"
+     or "深挖 MiniMax 估值"
 
-AI:  Collects materials → Applies 5-layer framework
-     → Surfaces hidden assumptions → Stress-tests your strategy
-     → Delivers structured, evidence-driven analysis
+AI:  Auto-searches (Google AI + Brave) → Collects materials
+     → Applies 5-layer framework → Surfaces hidden assumptions
+     → Stress-tests your strategy → Delivers structured insights
 ```
 
 ## ✨ What Makes Drill Different
@@ -43,11 +47,21 @@ cc --plugin-dir .
 
 Just say the word:
 
+**English:**
 ```
 "Drill into the market for [your idea]"
 "Drill down on this competitive landscape"
 "Drill my strategy"
 "Let's drill"
+```
+
+**中文:**
+```
+"深挖一下这个市场"
+"盘一下 MiniMax 估值"
+"深度分析竞争格局"
+"拆解这个商业模式"
+"剖析战略风险"
 ```
 
 **That's it.** Drill automatically collects materials and applies rigorous analysis.
