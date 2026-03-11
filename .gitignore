@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+.temp/
+tmp/
+
+# Claude Code specific
+.claude/
+
+# Node modules (if any scripts)
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Environment
+.env
+.env.local
+
+# Testing
+.coverage
+.pytest_cache/
+
+# Build outputs
+dist/
+build/
